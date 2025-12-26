@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gitlab-gray-700 antialiased;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center px-4 py-2 border text-sm font-medium rounded transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply border-transparent text-white bg-gitlab-blue-600 hover:bg-gitlab-blue-700 focus:ring-gitlab-blue-500 shadow-sm;
+  }
+  
+  .btn-secondary {
+    @apply border-gitlab-gray-200 text-gitlab-gray-700 bg-white hover:bg-gitlab-gray-100 focus:ring-gitlab-gray-200;
+  }
+
+  .btn-danger {
+    @apply border-transparent text-white bg-gitlab-status-danger hover:bg-red-700 focus:ring-red-500 shadow-sm;
+  }
+
+  .input {
+    @apply block w-full rounded border-gitlab-gray-200 shadow-sm focus:border-gitlab-blue-500 focus:ring-gitlab-blue-500 sm:text-sm py-2 px-3 text-gitlab-gray-900 bg-white placeholder-gitlab-gray-500 border;
+  }
+
+  .select {
+    @apply block w-full rounded border-gitlab-gray-200 shadow-sm focus:border-gitlab-blue-500 focus:ring-gitlab-blue-500 sm:text-sm py-2 px-3 bg-white border;
+  }
+
+  .card {
+    @apply bg-white border border-gitlab-gray-200 rounded shadow-sm;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+}
+
+/* Markdown overrides */
+.markdown h1 { @apply text-2xl font-bold mb-4 text-gitlab-gray-900; }
+.markdown h2 { @apply text-xl font-bold mt-6 mb-3 text-gitlab-gray-900; }
+.markdown p { @apply mb-4 leading-relaxed text-gitlab-gray-700; }
+.markdown ul { @apply list-disc list-inside mb-4 ml-4 text-gitlab-gray-700; }
+.markdown ol { @apply list-decimal list-inside mb-4 ml-4 text-gitlab-gray-700; }
+.markdown code { @apply bg-gitlab-gray-100 px-1 py-0.5 rounded text-sm text-pink-600 font-mono; }
+.markdown pre { @apply bg-gitlab-gray-100 p-4 rounded mb-4 overflow-x-auto border border-gitlab-gray-200; }
+.markdown pre code { @apply bg-transparent text-gray-800 p-0; }
+.markdown blockquote { @apply border-l-4 border-gitlab-gray-200 pl-4 italic text-gitlab-gray-500; }
